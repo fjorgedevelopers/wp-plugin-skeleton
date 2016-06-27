@@ -5,6 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Deactivate {
 	public static function deactivate() {
-		delete_option( LAST_EXPORTED );
+		// run delete option on any options that should be removed on deactivation, but do not delete wp_option or delte any databases
 	}
 }
