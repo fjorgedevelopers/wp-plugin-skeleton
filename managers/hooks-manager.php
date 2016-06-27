@@ -13,7 +13,8 @@ class HooksManager {
 	}
 
 	public function quash_unused() {
-		// this is for anyone using an IDE. It can be useful for that, but don't put any code in here.
+		// This is for anyone using an IDE. It can be useful for quashing the warning that HooksManager is unused.
+		// Don't put any code in here.
 	}
 
 	public static function debug_action( $var ) {
