@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Activate {
-	public static function activate() {
+	public static function do_activate() {
 		// Add any databases or default options here.
 	}
 }
