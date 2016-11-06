@@ -43,11 +43,14 @@ require_once( 'managers/hooks-manager.php' );
 // Activation and deactivation hooks need to be in this file.
 // (De)Activation Hooks
 require_once( 'helpers/activate.php' );
-register_activation_hook( __FILE__, array( 'plugin_name\Activate', 'activate' ) );
+register_activation_hook( __FILE__, array( 'plugin_name\Activate', 'do_activate' ) );
 require_once( 'helpers/deactivate.php' );
-register_deactivation_hook( __FILE__, array( 'plugin_name\Deactivate', 'deactivate' ) );
+register_deactivation_hook( __FILE__, array( 'plugin_name\Deactivate', 'do_deactivate' ) );
 // End Hooks
 
+/**
+ * @property
+ */
 global $viewBag;
 createHooksHandler();
 
