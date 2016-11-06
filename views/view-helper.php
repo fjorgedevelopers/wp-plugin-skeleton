@@ -32,6 +32,6 @@ function include_view($filename) {
  */
 function generate_view_as_string($filename) {
 	ob_start();
-    include_view($filename);
+	include_view($filename);
 	return ob_get_clean();
 }
