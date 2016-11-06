@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function debug_to_browser_console( $data ) {
 	$jso    = json_encode( $data );
-	$js_log = "console.log($jso)";
+	$js_log = "console.log($jso);";
 	$output = '<script type="text/javascript" data-debug="true">' . $js_log . '</script>';
 	echo $output;
 }
