@@ -8,7 +8,7 @@
  * Description:       
  * Version:           1.0
  * Author:            fjorge developers <developers@fjorgedigital.com>
- * License:           Proprietary
+ * License:           MIT
  */
 
 // If wordpress isn't the one calling this
@@ -16,12 +16,16 @@ if ( ! defined( 'WPINC' ) ) {
 	die(); // end.
 }
 
+/**
+ * Sets up the hooks-handler, and registers any cron hooks.
+ */
 function createHooksHandler() {
 	global $viewBag;
 	$viewBag = array();
 	$hooks   = new HooksManager();
 	$hooks->quash_unused();
-	// add any cron hooks here
+	// \/ add any cron hooks here \/
+	
 }
 
 define( 'PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
@@ -49,7 +53,7 @@ register_deactivation_hook( __FILE__, array( 'plugin_name\Deactivate', 'do_deact
 // End Hooks
 
 /**
- * @property
+ * @property array[string]mixed The viewBag is a way to store a value in a manager, and access it inside a view.
  */
 global $viewBag;
 createHooksHandler();
