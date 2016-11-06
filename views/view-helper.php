@@ -7,14 +7,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string $filename The filename of the php view to be output. Must be in static/js folder.
  */
 function include_script($filename) {
-    //include(PLUGIN_NAME_DIR . 'static/js/' . $filename);
+	//TODO: write this using the wp function
+	//include(PLUGIN_NAME_DIR . 'static/js/' . $filename);
 }
 
 /**
  * @param string $filename The filename of the css to be included. Must be in static/css folder.
  */
 function include_style($filename) {
-    //include(PLUGIN_NAME_DIR . 'static/css/' . $filename);
+	//TODO: write this using the wp function
+	//include(PLUGIN_NAME_DIR . 'static/css/' . $filename);
 }
 
 
