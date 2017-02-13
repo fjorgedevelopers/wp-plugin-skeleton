@@ -21,7 +21,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function createHooksHandler() {
 	global $viewBag;
-	$viewBag = array();
+	$viewBag = isset($viewBag) ? $viewBag : array();
 	$hooks   = new HooksManager();
 	$hooks->quash_unused();
 	// \/ add any cron hooks here \/
