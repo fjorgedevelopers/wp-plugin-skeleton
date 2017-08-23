@@ -4,9 +4,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * @param string $filename The filename of the php view to be output. Must be in static/js folder.
+ */
+function include_script($filename) {
+	$file = PLUGIN_NAME_DIR . 'static/js/' . $filename;
+	wp_enque_script( $filename, $file );
+    //include(PLUGIN_NAME_DIR . 'static/js/' . $filename);
+}
+
+/**
+ * @param string $filename The filename of the css to be included. Must be in static/css folder.
+ */
+function include_style($filename) {
+	$file = PLUGIN_NAME_DIR . 'static/js/' . $filename;
+	wp_enqueue_style( $filename, $file);
+    //include(PLUGIN_NAME_DIR . 'static/css/' . $filename);
+}
+
+
+/**
  * @param string $filename The filename of the php view to be output. Must be in views folder.
  */
-function fjorge_view($filename) {
+function include_view($filename) {
 	include(PLUGIN_NAME_DIR . 'views/' . $filename);
 }
 
@@ -15,8 +34,8 @@ function fjorge_view($filename) {
  *
  * @return string the rendered PHP
  */
-function fjorge_view_object($filename) {
+function generate_view_as_string($filename) {
 	ob_start();
-	fjorge_view($filename);
+    include_view($filename);
 	return ob_get_clean();
 }
