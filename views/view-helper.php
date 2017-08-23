@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function include_script($filename) {
 	$file = PLUGIN_NAME_DIR . 'static/js/' . $filename;
 	wp_enque_script( $filename, $file );
-    //include(PLUGIN_NAME_DIR . 'static/js/' . $filename);
 }
 
 /**
@@ -18,7 +17,6 @@ function include_script($filename) {
 function include_style($filename) {
 	$file = PLUGIN_NAME_DIR . 'static/js/' . $filename;
 	wp_enqueue_style( $filename, $file);
-    //include(PLUGIN_NAME_DIR . 'static/css/' . $filename);
 }
 
 
